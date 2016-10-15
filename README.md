@@ -33,9 +33,9 @@ var width = 1000; // meters
 var options = { className: 'route-corridor' };
 
 // Create a corridor and add to the map
-var line = L.corridor(coords, width, options);
-map.fitBounds(line.getBounds());
-map.addLayer(line);
+var corridor = L.corridor(coords, width, options);
+map.fitBounds(corridor.getBounds());
+map.addLayer(corridor);
 ```
 
 ### Parameters
