@@ -1,8 +1,8 @@
 leaflet-corridor
 ================
-Renders a polyline with width which is fixed in meters, not in pixels. That means 
-that line width changes when zoom level changes. Handy to denote geographic corridors:
-ranges of specified width around a polyline.
+Renders a polyline with width fixed in meters, not in pixels. This means 
+that the line width changes whenever zoom level changes. Handy to denote 
+geographic corridors: ranges of specified width around a polyline.
 
 *Tested with Leaflet 0.7.1 or newer*
 
@@ -15,7 +15,7 @@ Using leaflet-corridor plugin is very easy.
 * Download and place the `leaflet-corridor.js` file in your project.
 * Link javascript file in your HTML document:
 ```html
-     <script src="...path-to-files.../leaflet-corridor.js"></script>
+<script src="...path-to-files.../leaflet-corridor.js"></script>
 ```
 * Then use in simple way in javascript file:
 ```javascript
@@ -37,7 +37,7 @@ map.addLayer(line);
 ```
 
 ### Parameters
-| Parameter          | Description
+| Parameter       | Description
 | --------------- | ---------------------- 
 | latlngs         | Array of L.latLng to define polyline coordinates
 | corridor        | Width of corridor in meters
