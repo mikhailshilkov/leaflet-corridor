@@ -28,22 +28,24 @@ var coords = [
   // ...
 ];
 
-// Define corridor options
-var width = 1000; // meters
-var options = { className: 'route-corridor' };
+// Define corridor options including width
+var options = { 
+  corridor: 1000, // meters
+  className: 'route-corridor' 
+};
 
 // Create a corridor and add to the map
-var corridor = L.corridor(coords, width, options);
+var corridor = L.corridor(coords, options);
 map.fitBounds(corridor.getBounds());
 map.addLayer(corridor);
 ```
 
 ### Parameters
-| Parameter       | Description
-| --------------- | ---------------------- 
-| latlngs         | Array of L.latLng to define polyline coordinates
-| corridor        | Width of corridor in meters
-| options         | Options for polyline rendering, exactly same as in L.polyline
+| Parameter         | Description
+| ----------------- | ---------------------- 
+| latlngs           | Array of L.latLng to define polyline coordinates
+| options.corridor  | Width of the corridor in meters
+| options.*         | Options for polyline rendering, exactly same as in L.polyline
 
 ### License
 

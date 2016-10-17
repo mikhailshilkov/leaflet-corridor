@@ -24,12 +24,12 @@
  */
 
 L.Corridor = L.Polyline.extend({
-  initialize: function (latlngs, corridor, options) {
+  initialize: function (latlngs, options) {
     var self = this;
 
     L.Polyline.prototype.initialize.call(this, latlngs, options);
 
-    this.corridor = corridor;
+    this.corridor = options.corridor;
     this.updateCallback = (function (e) {
       self._updateWeight(this);
     });
@@ -65,6 +65,6 @@ L.Corridor = L.Polyline.extend({
   }
 });
 
-L.corridor = function (latlngs, corridor, options) {
-  return new L.Corridor(latlngs, corridor, options);
+L.corridor = function (latlngs, options) {
+  return new L.Corridor(latlngs, options || { corridor: 100 });
 }
