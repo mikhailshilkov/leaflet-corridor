@@ -55,14 +55,13 @@ L.Corridor = L.Polyline.extend({
   },
 
   _getMetersPerPixel(map) {
-    let centerLatLng = map.getCenter(); // get map center
-    let pointC = map.latLngToContainerPoint(centerLatLng); // convert to containerpoint (pixels)
-    let pointX = L.point(pointC.x + 1, pointC.y); // add one pixel to x
+    var centerLatLng = map.getCenter(); // get map center
+    var pointC = map.latLngToContainerPoint(centerLatLng); // convert to containerpoint (pixels)
+    var pointX = L.point(pointC.x + 10, pointC.y); // add 10 pixels to x
 
     // convert containerpoints to latlng's
-    let latLngX = map.containerPointToLatLng(pointX);
-
-    return centerLatLng.distanceTo(latLngX); // calculate distance between c and x (latitude)
+    var latLngX = map.containerPointToLatLng(pointX);
+    return centerLatLng.distanceTo(latLngX) / 10; // calculate distance between c and x (latitude)
   }
 });
 
