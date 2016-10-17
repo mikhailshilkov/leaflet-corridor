@@ -4,7 +4,7 @@ Renders a polyline with width fixed in meters, not in pixels. This means
 that the line width changes whenever zoom level changes. Handy to denote 
 geographic corridors: ranges of specified width around a polyline.
 
-![Leaflet-corridor screenshot](http://mikhail.io/2016/10/leaflet-corridor/leaflet-corridor.png)
+![Leaflet-corridor screenshot](http://mikhail.io/2016/10/leaflet-plugin-to-render-geographic-corridors/leaflet-corridor.png)
 
 *Tested with Leaflet 0.7.1 or newer*
 
