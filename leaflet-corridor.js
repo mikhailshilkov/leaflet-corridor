@@ -54,7 +54,7 @@ L.Corridor = L.Polyline.extend({
     return corridor * 2 / this._getMetersPerPixel(map);
   },
 
-  _getMetersPerPixel(map) {
+  _getMetersPerPixel: function(map) {
     var centerLatLng = map.getCenter(); // get map center
     var pointC = map.latLngToContainerPoint(centerLatLng); // convert to containerpoint (pixels)
     var pointX = L.point(pointC.x + 10, pointC.y); // add 10 pixels to x
